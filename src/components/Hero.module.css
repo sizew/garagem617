@@ -1,0 +1,200 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-carbon);
+  color: var(--color-carbon-text);
+  padding-block: clamp(2.75rem, 5vw, 4.75rem) clamp(3.5rem, 6vw, 5.25rem);
+  border-bottom: 1px solid var(--color-carbon-line);
+}
+
+.accentLines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    -28deg,
+    transparent 62%,
+    rgba(245, 184, 0, 0.05) 62%,
+    rgba(245, 184, 0, 0.05) 63.5%,
+    transparent 63.5%,
+    transparent 65%,
+    rgba(245, 184, 0, 0.035) 65%,
+    rgba(245, 184, 0, 0.035) 66%,
+    transparent 66%
+  );
+  pointer-events: none;
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.25rem, 4vw, 3.75rem);
+  align-items: center;
+}
+
+.copyColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.location {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-amber);
+  margin-bottom: 1rem;
+}
+
+.headline {
+  font-size: var(--text-hero);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  max-width: 18ch;
+  color: var(--color-carbon-text);
+}
+
+.lead {
+  margin-top: 1.4rem;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-carbon-muted);
+  max-width: 54ch;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.primaryAction {
+  padding: 0.9rem 1.5rem;
+  background-color: var(--color-amber);
+  color: var(--color-amber-ink);
+  border: 1px solid var(--color-amber);
+  border-radius: var(--radius-control);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.primaryAction:hover {
+  background-color: var(--color-amber-bright);
+  border-color: var(--color-amber-bright);
+}
+
+.primaryAction:active {
+  transform: translateY(1px);
+}
+
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.35rem;
+  background-color: var(--color-carbon-elevated);
+  color: var(--color-carbon-text);
+  border: 1px solid var(--color-carbon-line);
+  border-radius: var(--radius-control);
+  font-weight: 500;
+  transition: border-color var(--duration-fast) ease, background-color var(--duration-fast) ease;
+}
+
+.secondaryAction:hover {
+  border-color: var(--color-amber);
+  background-color: var(--color-carbon-panel);
+}
+
+.textAction {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.25rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-carbon-muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: color var(--duration-fast) ease;
+}
+
+.textAction:hover {
+  color: var(--color-carbon-text);
+}
+
+.pillarStrip {
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-carbon-line);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+.pillarItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pillarTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-carbon-text);
+}
+
+.pillarNote {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-carbon-muted);
+  max-width: 34ch;
+}
+
+.mediaColumn {
+  width: 100%;
+}
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.imageFrame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-frame);
+  border: 1px solid var(--color-carbon-line);
+  background-color: var(--color-carbon-elevated);
+}
+
+.heroImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.caption {
+  font-size: var(--text-sm);
+  color: var(--color-carbon-muted);
+  max-width: 58ch;
+}
+
+@media (min-width: 640px) {
+  .pillarStrip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+  /* Garagem 617 Visual System: Matte Charcoal, Racing Amber & Architectural Light Contrast */
+  --color-carbon: #101216;
+  --color-carbon-elevated: #171b22;
+  --color-carbon-panel: #1f242d;
+  --color-carbon-line: #2d3440;
+  --color-carbon-text: #f3f5f8;
+  --color-carbon-muted: #9ca5b4;
+
+  --color-paper: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-panel: #e9ecf1;
+  --color-ink: #12151b;
+  --color-muted: #4b5563;
+  --color-line: #d5dbe4;
+  --color-line-strong: #b8c2cf;
+
+  /* Signature Garagem 617 Amber Accent (from storefront shutter door) */
+  --color-amber: #f5b800;
+  --color-amber-bright: #ffcc00;
+  --color-amber-hover: #dfa500;
+  --color-amber-ink: #101216;
+  --color-amber-tint: rgba(245, 184, 0, 0.14);
+
+  /* Semantic States */
+  --color-ok: #0e7c5b;
+  --color-ok-tint: rgba(14, 124, 91, 0.12);
+  --color-wa: #16a34a;
+  --color-wa-hover: #15803d;
+
+  /* Typography */
+  --font-display: 'Archivo', system-ui, -apple-system, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+
+  /* Fluid Type Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.65vw, 1.55rem);
+  --text-2xl: clamp(1.65rem, 1.35rem + 1.25vw, 2.35rem);
+  --text-hero: clamp(2.1rem, 1.55rem + 2.5vw, 3.55rem);
+
+  /* Spacing & Layout */
+  --container-max: 1240px;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --section-gap: clamp(4.25rem, 7vw, 7rem);
+
+  /* Geometry & Motion */
+  --radius-frame: 4px;
+  --radius-control: 6px;
+  --ease-precision: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+  --duration-reveal: 540ms;
+}
